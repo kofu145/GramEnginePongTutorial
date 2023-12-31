@@ -56,7 +56,7 @@ Then, thanks to this namespace, we'll go ahead and inherit the ``GameState`` cla
 // Again, this'll be your project's namespace. My project is named GramPong, hence the code here.
 namespace GramPong;  
   
-public class MainScene : Scene  
+public class MainScene : GameState  
 {  
 
 }
