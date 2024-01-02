@@ -220,7 +220,7 @@ I've set these to values that I think feel nice, but feel free to change them as
 Now in ``MainScene.cs``, inside of the ``Initialize`` method add our new ``Paddle`` component underneath where we added the ``Sprite`` components, like so.
 
 ```cs
-protected override void Initialize()
+public override void Initialize()
 {
     //...
     ball.AddComponent(new Sprite(ballTexture));
@@ -401,7 +401,7 @@ We also want to serve the ball whenever a player scores, so let's hop back into 
 
 ```cs
 //...
-protected override void Update(GameTime gameTime)
+public override void Update(GameTime gameTime)
 {
     //...
     if (Transform.Position.Y >= GameStateManager.Window.settings.BaseWindowHeight - radius)
@@ -458,7 +458,7 @@ With our collision checking method done, let's go ahead an implement the actual 
 
 ```cs
 //...
-protected override void Update(GameTime gameTime)
+public override void Update(GameTime gameTime)
 {
     //...
     else if (Transform.Position.X >= GameStateManager.Window.settings.BaseWindowWidth - radius)
@@ -494,7 +494,7 @@ With that, we've officially finished the ``Ball`` component! Let's go ahead and 
 
 ```cs
 //...
-protected override void Initialize()
+public override void Initialize()
 {
     //...
     ball.AddComponent(new Sprite(ballTexture));

@@ -38,7 +38,7 @@ With ``Initialize()`` declared, we can begin implementation. For starters, we'll
 
 ```cs
 //...
-protected override void Initialize()  
+public override void Initialize()  
 {  
     base.Initialize();  
     // Cannot actually change from nearest to bilinear yet, but the above is still nice to know
@@ -48,7 +48,7 @@ protected override void Initialize()
 We'll also override the ``Update`` method while we're at it. We won't be utilizing the scene's ``Update`` very much, and it won't be till much later, but it'll be nice to have it down after we've just gone over it.
 
 ```cs
-protected override void Update(GameTime gameTime)  
+public override void Update(GameTime gameTime)  
 {  
     base.Update(gameTime);
 }
@@ -81,7 +81,7 @@ public class MainScene : GameState
 With that settled, let's get everything initialized!
 
 ```cs
-protected override void Initialize()  
+public override void Initialize()  
 {  
     base.Initialize();  
   
@@ -98,7 +98,8 @@ Let's give them some life by attaching a sprite to draw them on screen!
 
 In your project, create a folder/directory named "Content", and add the following ball.png and paddle.png images there. 
 
-![](images/ball.png) ![](images/paddle.png)
+[ball image](images/ball.png) <br>
+[paddle image](images/paddle.png)
 
 > Make sure you also add a reference to where they end up in the output directory!
 > You can do this by adding a project reference in your project files, like so:
