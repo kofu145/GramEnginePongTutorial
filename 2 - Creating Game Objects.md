@@ -102,7 +102,7 @@ In your project, create a folder/directory named "Content", and add the followin
 [paddle image](images/paddle.png)
 
 > Make sure you also add a reference to where they end up in the output directory!
-> You can do this by adding a project reference in your project files, like so:
+> You can do this by adding a project reference in your project files (aka, your <ProjectName.csproj> file), like so:
 
 ```cs
 <ItemGroup>
