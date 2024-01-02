@@ -13,7 +13,7 @@ You should have class definitions inside of them, just like this:
 // recognize that it'll be based on your project name, not GramPong.
 namespace GramPong.Components;
 
-public class Ball
+public class Ball : Component
 {
     
 }
@@ -22,7 +22,7 @@ public class Ball
 // Paddle.cs
 namespace GramPong.Components;
 
-public class Paddle
+public class Paddle : Component
 {
     
 }
@@ -139,9 +139,9 @@ Now we can define our game logic! In a game of pong, each paddle just needs to e
 
 ```cs
 //...
-public override void Update()
+public override void Update(GameTime gameTime)
 {
-    base.Update();
+    base.Update(GameTime gameTime);
     
     // Basic switch statements that moves each paddle to its accordingly bound keys, clamped to screen bounds.
     velocity = 0f;
@@ -401,7 +401,7 @@ We also want to serve the ball whenever a player scores, so let's hop back into 
 
 ```cs
 //...
-protected override void Update()
+protected override void Update(GameTime gameTime)
 {
     //...
     if (Transform.Position.Y >= GameStateManager.Window.settings.BaseWindowHeight - radius)
@@ -458,7 +458,7 @@ With our collision checking method done, let's go ahead an implement the actual 
 
 ```cs
 //...
-protected override void Update()
+protected override void Update(GameTime gameTime)
 {
     //...
     else if (Transform.Position.X >= GameStateManager.Window.settings.BaseWindowWidth - radius)

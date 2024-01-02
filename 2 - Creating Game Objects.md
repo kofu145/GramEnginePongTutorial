@@ -169,9 +169,9 @@ rightPlayer.AddComponent(new Sprite(paddleTexture));
 
 // NEW
 // Some size refactoring to better fit the screen + gameplay
-ball.Transform.Scale = new Vector3(BallSize, BallSize, 1f);
-leftPlayer.Transform.Scale = new Vector3(PaddleSize, PaddleSize, 1f);
-rightPlayer.Transform.Scale = new Vector3(PaddleSize, PaddleSize, 1f);
+ball.Transform.Scale = new Vector2(BallSize, BallSize);
+leftPlayer.Transform.Scale = new Vector2(PaddleSize, PaddleSize);
+rightPlayer.Transform.Scale = new Vector2(PaddleSize, PaddleSize);
 ```
 All the different transformations under ``Transform`` all utilize a ``Vector3`` or ``Vector2``, representing a mathematical vector. For our purposes, this utilizes the format (x, y, z), but the z axis won't matter for this 2d game. (You'll see I'll always just be setting it to 1)
 
