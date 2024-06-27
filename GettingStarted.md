@@ -8,5 +8,5 @@ After creating a new project, right click on the Solution, click Add > Existing 
 
 For Jetbrains Rider:
 Right click your solution, go to Add > Existing Project and select your GramEngine.csproj file wherever you cloned GramEngine to. From there, right click your game's project file (not your solution!) then go Add > Reference and check off GramEngine in the list. 
-![rider](ridergettingstarted.png)
-![rider reference](referencerider.png)
+![rider](images/ridergettingstarted.png)
+![rider reference](images/referencerider.png)
